@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barbearia Gomez — O Visual de Craque que Você Procura</title>
+  <meta name="description" content="Barbearia Gomez em Paciência e Inhoaíba. Corte + Barba por R$65. Mais de 180 avaliações 5 estrelas no Google. Agende pelo WhatsApp agora!" />
+  <meta property="og:title" content="Barbearia Gomez — Corte + Barba por R$65" />
+  <meta property="og:description" content="Mais de 180 avaliações 5★ no Google. Duas unidades em Paciência e Inhoaíba, Rio de Janeiro." />
+  <meta property="og:image" content="https://barbeariagomez.com.br/img/hero.webp" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="600" />
+  <meta property="og:url" content="https://barbeariagomez.com.br/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <link rel="preload" as="font" type="font/woff2" href="fonts/HighJakarta.woff2" crossorigin="anonymous" />
+  <link rel="preload" as="image" href="img/hero-mobile.webp" media="(max-width: 1023px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="img/hero.webp" media="(min-width: 1024px)" fetchpriority="high" />
+  <style>
+@font-face{font-family:'HighJakarta';src:url('fonts/HighJakarta.woff2') format('woff2');font-weight:400 900;font-style:normal;font-display:swap}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Trebuchet MS','Arial Narrow',Arial,sans-serif;background:#f1f5f9;color:#0f172a;font-size:1.05rem;letter-spacing:.04em;line-height:1.5;overflow-wrap:break-word;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+:root{--blue-dark:#0a1628;--blue-mid:#0284C7;--blue-accent:#0284C7;--gold:#f59e0b;--green-wa:#25D366;--green-wa-dark:#128C7E;--white:#fff;--slate-50:#f8fafc;--slate-100:#f1f5f9;--slate-200:#e2e8f0;--slate-600:#475569;--slate-800:#1e293b}
+.navbar{position:sticky;top:0;z-index:100;background:#fff;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e2e8f0;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.navbar__logo{height:44px;width:auto}
+.navbar__links{display:none;gap:1.5rem;list-style:none}
+.navbar__links a{color:#475569;font-size:1rem;font-weight:500;transition:color .2s}
+.navbar__links a:hover{color:#0284C7}
+.navbar__cta{display:inline-flex;align-items:center;gap:.4rem;background:var(--green-wa);color:#fff;font-weight:700;font-size:1rem;padding:.5rem 1rem;border-radius:8px;border:none;cursor:pointer;transition:background .2s,transform .15s;white-space:nowrap}
+.navbar__cta:hover{background:var(--green-wa-dark);transform:scale(1.03)}
+@media(min-width:768px){.navbar__links{display:flex}}
+.hero{background:var(--slate-100);padding:2rem 1.25rem 1.5rem}
+.hero__inner{max-width:1200px;margin:0 auto}
+.hero__eyebrow{font-family:'HighJakarta',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--blue-accent);margin-bottom:.5rem}
+.hero__title{font-family:'HighJakarta',sans-serif;font-size:clamp(2.2rem,7vw,3.75rem);font-weight:900;line-height:1.05;letter-spacing:-.02em;color:var(--blue-dark);margin-bottom:.5rem}
+.hero__subtitle-assinatura{font-size:.78rem;color:var(--slate-600);font-weight:500;margin-bottom:.75rem;display:flex;align-items:center;gap:.35rem;flex-wrap:nowrap;overflow:hidden}
+.hero__subtitle-assinatura span{white-space:nowrap}
+.hero__subtitle-assinatura span:first-child{display:inline-flex;align-items:center;justify-content:center;background:var(--blue-mid);color:#fff;font-size:.7rem;font-weight:700;padding:.2rem .5rem .15rem;border-radius:999px;letter-spacing:.05em;line-height:1;flex-shrink:0}
+.hero__desc{font-size:.92rem;color:var(--slate-600);line-height:1.5;margin-bottom:1rem;max-width:36rem}
+.hero__badge{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:1.5px solid var(--slate-200);border-radius:999px;padding:.4rem .9rem;font-size:.85rem;font-weight:600;color:var(--slate-800);margin-bottom:1.1rem;box-shadow:0 2px 8px rgba(0,0,0,.06);white-space:nowrap;max-width:100%}
+.hero__badge .stars{color:#f59e0b;letter-spacing:.02em;white-space:nowrap;flex-shrink:0}
+.hero__btns{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;margin-bottom:1rem}
+.hero__image-mobile{width:100%;height:280px;object-fit:cover;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.12);margin-top:1rem}
+@media(min-width:1024px){.hero{padding:3rem 2rem}.hero__inner{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:3rem}.hero__image-mobile{height:520px;margin-top:0}}
+.btn-wa{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;background:var(--green-wa);color:#fff;font-weight:700;font-size:1rem;padding:.875rem 1.5rem;border-radius:10px;border:none;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 4px 16px rgba(37,211,102,.35);min-width:220px;text-align:center}
+.btn-wa svg{flex-shrink:0;width:22px;height:22px}
+.btn-wa:hover{background:var(--green-wa-dark);transform:translateY(-1px);box-shadow:0 6px 20px rgba(37,211,102,.45)}
+.btn-secondary{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;background:transparent;color:var(--blue-dark);font-weight:600;font-size:.95rem;padding:.8rem 1.25rem;border-radius:10px;border:2px solid var(--slate-200);cursor:pointer;transition:border-color .2s,background .2s;min-width:140px;text-align:center}
+.btn-secondary:hover{border-color:var(--blue-accent);background:var(--blue-accent);color:#fff}
+.combo-section{background:var(--blue-dark);padding:2rem 1.25rem}
+.combo-section__inner{max-width:900px;margin:0 auto}
+.combo-tag{display:inline-flex;align-items:center;justify-content:center;background:var(--gold);color:var(--blue-dark);font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;padding:.35rem .75rem .25rem;border-radius:999px;margin-bottom:.75rem;line-height:1}
+.combo-section h2{font-family:'HighJakarta',sans-serif;color:#fff;font-size:clamp(1.4rem,4vw,2rem);font-weight:800;margin-bottom:.5rem;line-height:1.2}
+.combo-section h2 em{color:var(--gold);font-style:normal}
+.combo-section p{color:rgba(255,255,255,.7);font-size:.9rem;margin-bottom:1.25rem;max-width:500px}
+.combo-cards{display:flex;flex-direction:column;gap:.75rem}
+@media(min-width:640px){.combo-cards{flex-direction:row}}
+.combo-card{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:1.25rem;display:flex;align-items:center;gap:1rem}
+.combo-card.highlight{background:linear-gradient(135deg,rgba(2,132,199,.35),rgba(2,132,199,.55));border-color:var(--blue-accent);position:relative;overflow:hidden}
+.combo-card.highlight::before{content:"🔥 MAIS PEDIDO";position:absolute;top:.8rem;right:.8rem;font-size:.85rem;font-weight:800;color:var(--blue-dark);background:var(--gold);padding:.35rem .75rem .25rem;border-radius:999px;letter-spacing:.08em;line-height:1}
+@media(min-width:768px){.combo-card.highlight::before{font-size:.8rem;top:.6rem;right:.6rem;padding:.25rem .65rem .2rem}}
+.combo-card__icon{font-size:2rem;flex-shrink:0}
+.combo-card__name{color:#fff;font-weight:700;font-size:.95rem;margin-bottom:.2rem}
+.combo-card__items{color:rgba(255,255,255,.6);font-size:.8rem;margin-bottom:.4rem}
+.combo-card__price{color:var(--gold);font-size:1.25rem;font-weight:800}
+.combo-cta{margin-top:1.5rem}
+.gallery-section{background:#fff;padding:2.5rem 1.25rem}
+.section-title{font-family:'HighJakarta',sans-serif;font-size:1.5rem;font-weight:800;color:var(--blue-dark);margin-bottom:1.25rem;text-align:center}
+.gallery-carousel{position:relative;max-width:900px;margin:0 auto;overflow:hidden;border-radius:14px}
+.gallery-track{display:flex;gap:1rem;transition:transform .45s cubic-bezier(.25,.46,.45,.94);will-change:transform}
+.gallery-slide{flex:0 0 100%;position:relative}
+@media(min-width:640px){.gallery-slide{flex:0 0 calc(50% - .5rem)}}
+@media(min-width:900px){.gallery-slide{flex:0 0 calc(33.333% - .67rem)}}
+.gallery-slide img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:center;display:block;border-radius:14px}
+.gallery-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:rgba(255,255,255,.92);border:none;border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.15);transition:background .2s,transform .2s;color:var(--blue-dark)}
+.gallery-btn:hover{background:#fff;transform:translateY(-50%) scale(1.08)}
+.gallery-btn--prev{left:10px}
+.gallery-btn--next{right:10px}
+.gallery-btn svg{width:18px;height:18px;flex-shrink:0}
+.gallery-dots{display:flex;justify-content:center;gap:7px;margin-top:.85rem}
+.gallery-dot{width:8px;height:8px;border-radius:50%;background:var(--slate-200);border:none;cursor:pointer;padding:0;transition:background .25s,transform .25s}
+.gallery-dot.active{background:#0284C7;transform:scale(1.3)}
+.location-section{background:var(--slate-100);padding:2.5rem 1.25rem}
+.units-grid{display:grid;gap:1.25rem;max-width:960px;margin:0 auto}
+.unit-card{background:#fff;border-radius:14px;border:1px solid #e2e8f0;border-top:3px solid var(--blue-accent);box-shadow:0 2px 12px rgba(0,0,0,.06);overflow:hidden;display:grid;grid-template-columns:1fr}
+@media(min-width:600px){.unit-card{grid-template-columns:1fr 1fr}}
+.unit-card__info{padding:1.5rem;border-bottom:1px solid #e2e8f0;display:flex;flex-direction:column}
+@media(min-width:600px){.unit-card__info{border-bottom:none;border-right:1px solid #e2e8f0}}
+.unit-status{display:inline-flex;align-items:center;gap:.35rem;font-size:.72rem;font-weight:700;letter-spacing:.08em;color:#16a34a;text-transform:uppercase;margin-bottom:.6rem}
+.unit-status__dot{width:8px;height:8px;border-radius:50%;background:#16a34a;animation:blink-dot 2s ease-in-out infinite}
+@keyframes blink-dot{0%,100%{opacity:1}50%{opacity:.35}}
+.unit-card__name{font-size:1.5rem;font-weight:800;color:var(--blue-dark);line-height:1.2;margin-bottom:1.1rem}
+.unit-detail{display:flex;align-items:flex-start;gap:.75rem;margin-bottom:.85rem}
+.unit-detail__icon{width:36px;height:36px;border-radius:8px;background:#eff6ff;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--blue-accent)}
+.unit-detail__label{font-size:.78rem;font-weight:600;color:#64748b;margin-bottom:.1rem}
+.unit-detail__value{font-size:.9rem;color:var(--blue-dark);font-weight:500;line-height:1.4}
+.unit-detail__sub{font-size:.78rem;color:#94a3b8;margin-top:.1rem}
+.unit-card__actions{display:flex;gap:.6rem;margin-top:auto;padding-top:1rem;flex-wrap:wrap}
+.btn-unit-agenda{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;background:var(--blue-accent);color:#fff;font-weight:700;font-size:.82rem;padding:.65rem 1rem;border-radius:8px;transition:background .2s,transform .15s;white-space:nowrap}
+.btn-unit-agenda:hover{background:#0369a1;transform:translateY(-1px)}
+.btn-maps{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;background:transparent;color:var(--blue-dark);font-weight:600;font-size:.82rem;padding:.65rem 1rem;border-radius:8px;border:1.5px solid #cbd5e1;transition:border-color .2s,background .2s,color .2s;white-space:nowrap}
+.btn-maps:hover{border-color:var(--blue-accent);background:#eff6ff;color:var(--blue-accent)}
+.unit-card__hours{padding:1.5rem}
+.hours-title{display:flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#64748b;margin-bottom:1rem}
+.hours-list{display:flex;flex-direction:column}
+.hours-row{display:flex;align-items:center;justify-content:space-between;padding:.55rem 0;border-bottom:1px dashed #e2e8f0;font-size:.875rem}
+.hours-row:last-child{border-bottom:none}
+.hours-row__day{color:#334155;font-weight:500}
+.hours-row__time{color:#334155;font-weight:500}
+.hours-row__time.closed{color:#94a3b8;font-weight:600}
+@media(min-width:768px){.unit-card__name{font-size:1.7rem}.unit-detail__label{font-size:.9rem}.unit-detail__value{font-size:1.15rem}.unit-detail__sub{font-size:.85rem}.hours-title{font-size:.9rem}.hours-row{font-size:1.05rem}.btn-unit-agenda,.btn-maps{font-size:.95rem;padding:.8rem 1.25rem}.unit-detail__icon{width:44px;height:44px}}
+.services-section{background:#fff;padding:2.5rem 1.25rem}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;max-width:900px;margin:0 auto 1.5rem}
+@media(min-width:640px){.services-grid{grid-template-columns:repeat(3,1fr)}}
+.service-card{background:var(--slate-50);border:1px solid var(--slate-200);border-radius:12px;padding:1.25rem;text-align:center}
+.service-card__icon{font-size:1.75rem;margin-bottom:.5rem}
+.service-card__name{font-weight:700;font-size:.9rem;color:var(--blue-dark);margin-bottom:.4rem}
+.service-card__price{font-weight:800;font-size:1.05rem;color:var(--blue-accent)}
+.faq-section{background:var(--slate-100);padding:2.5rem 1.25rem}
+.faq-list{max-width:720px;margin:0 auto}
+.faq-item{background:#fff;border-radius:10px;margin-bottom:.75rem;overflow:hidden;border:1px solid var(--slate-200)}
+.faq-item summary{padding:1rem 1.25rem;font-weight:600;font-size:.95rem;cursor:pointer;color:var(--blue-dark);list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';font-size:1.2rem;color:var(--blue-accent)}
+.faq-item[open] summary::after{content:'−'}
+.faq-item p{padding:0 1.25rem 1rem;font-size:.875rem;color:var(--slate-600);line-height:1.6}
+.reviews-section{background:#fff;padding:2.5rem 1.25rem}
+.reviews-grid{display:grid;gap:.75rem;max-width:900px;margin:0 auto}
+@media(min-width:640px){.reviews-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.reviews-grid{grid-template-columns:1fr 1fr 1fr}}
+.review-card{background:var(--slate-50);border:1px solid var(--slate-200);border-radius:12px;padding:1.25rem}
+.review-card__stars{color:var(--gold);font-size:.9rem;margin-bottom:.5rem}
+.review-card__text{font-size:.85rem;color:var(--slate-600);line-height:1.5;margin-bottom:.75rem}
+.review-card__author{font-weight:700;font-size:.85rem;color:var(--blue-dark)}
+.footer{background:var(--blue-dark);padding:1.5rem 1.25rem 6.5rem;text-align:center}
+.footer p{color:rgba(255,255,255,.5);font-size:.78rem}
+.float-wa{position:fixed;bottom:24px;right:20px;z-index:999;background:var(--green-wa);color:#fff;border-radius:999px;min-width:56px;height:56px;display:flex;align-items:center;justify-content:center;gap:.5rem;box-shadow:0 4px 20px rgba(37,211,102,.5);font-weight:700;font-size:.85rem;padding:0 1.1rem;border:none;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s;white-space:nowrap}
+.float-wa:hover{background:var(--green-wa-dark);transform:scale(1.06);box-shadow:0 6px 28px rgba(37,211,102,.6)}
+.float-wa svg{flex-shrink:0;width:26px;height:26px}
+.float-wa span{display:none}
+@media(min-width:480px){.float-wa span{display:inline}}
+.float-wa::before{content:'';position:absolute;inset:-4px;border-radius:999px;background:var(--green-wa);opacity:.3;animation:pulse-ring 2.2s ease-out infinite}
+@keyframes pulse-ring{0%{transform:scale(1);opacity:.3}80%,100%{transform:scale(1.45);opacity:0}}
+section[id]{scroll-margin-top:68px}
+.section-label{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-accent);text-align:center;margin-bottom:.4rem}
+#wa-popup{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:1rem}
+#wa-popup.open{display:flex}
+.wa-popup__overlay{position:absolute;inset:0;background:rgba(10,22,40,.65);backdrop-filter:blur(3px)}
+.wa-popup__box{position:relative;background:#fff;border-radius:20px;padding:1.75rem 1.5rem;width:100%;max-width:420px;box-shadow:0 24px 64px rgba(0,0,0,.2);animation:popupIn .25s ease}
+@keyframes popupIn{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+.wa-popup__close{position:absolute;top:1rem;right:1rem;background:#f1f5f9;border:none;border-radius:50%;width:32px;height:32px;font-size:.85rem;cursor:pointer;color:#475569;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.wa-popup__close:hover{background:#e2e8f0}
+.wa-popup__eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0284C7;margin-bottom:.3rem}
+.wa-popup__title{font-family:'HighJakarta',sans-serif;font-size:1.4rem;font-weight:800;color:#0a1628;margin-bottom:1.25rem}
+.wa-popup__units{display:flex;flex-direction:column;gap:.75rem}
+.wa-popup__unit{display:flex;align-items:center;gap:1rem;background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:14px;padding:1rem 1.25rem;transition:border-color .2s,background .2s;text-decoration:none}
+.wa-popup__unit:hover{border-color:var(--green-wa);background:#f0fdf4}
+.wa-popup__unit svg{width:28px;height:28px;flex-shrink:0;color:var(--green-wa)}
+.wa-popup__unit-name{font-weight:700;font-size:.95rem;color:#0a1628;margin-bottom:.15rem}
+.wa-popup__unit-sub{font-size:.78rem;color:#475569}
+  </style>
+</head>
+<body>
+
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="icon-wa" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.524 5.845L.057 23.486a.5.5 0 0 0 .614.603l5.8-1.52A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.882 9.882 0 0 1-5.031-1.374l-.361-.214-3.741.981.999-3.645-.235-.374A9.887 9.887 0 0 1 2.1 12C2.1 6.533 6.533 2.1 12 2.1S21.9 6.533 21.9 12 17.467 21.9 12 21.9z"/>
+  </symbol>
+</svg>
+
+<nav class="navbar">
+  <img class="navbar__logo" src="img/logo.webp" alt="Barbearia Gomez" width="168" height="44" loading="eager" fetchpriority="low" />
+  <ul class="navbar__links">
+    <li><a href="#gallery">Galeria</a></li>
+    <li><a href="#units">Localização</a></li>
+    <li><a href="#services">Serviços</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#reviews">Depoimentos</a></li>
+  </ul>
+  <button class="navbar__cta" onclick="openWaPopup()" type="button" aria-label="Agendar pelo WhatsApp">
+    <svg width="16" height="16" aria-hidden="true"><use href="#icon-wa"/></svg>
+    Reservar
+  </button>
+</nav>
+
+<main style="overflow-x:hidden;width:100%;position:relative">
+
+<section id="home" class="hero">
+  <div class="hero__inner">
+    <div class="hero__text">
+      <p class="hero__eyebrow">VOCÊ EM OUTRO NÍVEL</p>
+      <h1 class="hero__title">O Visual de Craque que Você Procura está na Gomez</h1>
+      <p class="hero__subtitle-assinatura">
+        <span>NOVIDADE</span>
+        <span>1ª Barbearia por Assinatura da Região</span>
+      </p>
+      <p class="hero__desc">Tradição, estilo e bem-estar num só lugar. Cuidamos do seu visual enquanto você relaxa.</p>
+      <div class="hero__badge">
+        <span class="stars">★★★★★</span>
+        <span>5.0 no Google · +180 avaliações</span>
+      </div>
+      <div class="hero__btns">
+        <button id="hero-cta-primary" class="btn-wa" onclick="openWaPopup()" type="button">
+          <svg width="22" height="22" aria-hidden="true"><use href="#icon-wa"/></svg>
+          Agendar pelo WhatsApp
+        </button>
+        <a class="btn-secondary" href="http://cashbarber.com.br/barbeariagomez" target="_blank" rel="noopener">Ver Serviços</a>
+      </div>
+    </div>
+    <picture>
+      <source media="(min-width: 1024px)" srcset="img/hero.webp" />
+      <source media="(max-width: 1023px)" srcset="img/hero-mobile.webp" />
+      <img class="hero__image-mobile" src="img/hero.webp" alt="Experiência premium na Barbearia Gomez" width="800" height="600" loading="eager" fetchpriority="high" decoding="async" />
+    </picture>
+  </div>
+</section>
+
+<section id="combo" class="combo-section">
+  <div class="combo-section__inner">
+    <span class="combo-tag">🔥 Oferta Especial</span>
+    <h2>Combo Titular:<br><em>Corte + Barba</em></h2>
+    <p>Aproveite nossa oferta mais completa e saia renovado do jeito que você merece.</p>
+    <div class="combo-cards">
+      <div class="combo-card">
+        <div class="combo-card__icon">✂️</div>
+        <div><div class="combo-card__name">Corte de Cabelo</div><div class="combo-card__items">Corte moderno + acabamento</div><div class="combo-card__price">R$ 40,00</div></div>
+      </div>
+      <div class="combo-card highlight">
+        <div class="combo-card__icon">💈</div>
+        <div><div class="combo-card__name">Combo Titular</div><div class="combo-card__items">Corte + Barba completo</div><div class="combo-card__price">R$ 65,00</div></div>
+      </div>
+      <div class="combo-card">
+        <div class="combo-card__icon">🪒</div>
+        <div><div class="combo-card__name">Barba</div><div class="combo-card__items">Modelagem + acabamento</div><div class="combo-card__price">R$ 25,00</div></div>
+      </div>
+    </div>
+    <div class="combo-cta">
+      <button class="btn-wa" onclick="openWaPopup()" type="button">
+        <svg width="22" height="22" aria-hidden="true"><use href="#icon-wa"/></svg>
+        Quero o Combo Titular
+      </button>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="gallery-section">
+  <div class="section-label">Portfólio</div>
+  <h2 class="section-title">Galeria</h2>
+  <div class="gallery-carousel" id="galleryCarousel" aria-label="Galeria de fotos">
+    <div class="gallery-track" id="galleryTrack">
+      <div class="gallery-slide"><img src="img/galeria-3.webp" alt="Tratamento com vapor na Barbearia Gomez" width="600" height="600" loading="lazy" decoding="async" /></div>
+      <div class="gallery-slide"><img src="img/galeria-4.webp" alt="Barbeiro fazendo barba na navalha" width="600" height="600" loading="lazy" decoding="async" /></div>
+      <div class="gallery-slide"><img src="img/galeria-5.webp" alt="Tratamento facial com espuma na Barbearia Gomez" width="600" height="600" loading="lazy" decoding="async" /></div>
+      <div class="gallery-slide"><img src="img/galeria-6.webp" alt="Barbeiro penteando o cabelo do cliente" width="600" height="600" loading="lazy" decoding="async" /></div>
+      <div class="gallery-slide"><img src="img/galeria-7.webp" alt="Corte de cabelo com chapinha na Barbearia Gomez" width="600" height="600" loading="lazy" decoding="async" /></div>
+      <div class="gallery-slide"><img src="img/galeria-8.webp" alt="Beard Oil — produto para barba na Barbearia Gomez" width="600" height="600" loading="lazy" decoding="async" /></div>
+    </div>
+    <button class="gallery-btn gallery-btn--prev" id="galleryPrev" aria-label="Foto anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="gallery-btn gallery-btn--next" id="galleryNext" aria-label="Próxima foto">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
+    </button>
+  </div>
+  <div class="gallery-dots" id="galleryDots" role="tablist" aria-label="Indicadores de slide"></div>
+</section>
+
+<section id="units" class="location-section">
+  <div class="section-label">Onde estamos</div>
+  <h2 class="section-title">Localização</h2>
+  <div class="units-grid">
+    <div class="unit-card">
+      <div class="unit-card__info">
+        <div class="unit-status" id="status-paciencia"><span class="unit-status__dot"></span>Aberto</div>
+        <div class="unit-card__name">Unidade Paciência</div>
+        <div class="unit-detail">
+          <div class="unit-detail__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="unit-detail__label">Endereço</div><div class="unit-detail__value">Rua campestre lote 23 quadra 32</div><div class="unit-detail__sub">23585240</div></div>
+        </div>
+        <div class="unit-detail">
+          <div class="unit-detail__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 5.53 5.53l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg></div>
+          <div><div class="unit-detail__label">Telefone</div><div class="unit-detail__value">(21) 96743-6081</div></div>
+        </div>
+        <div class="unit-card__actions">
+          <a class="btn-unit-agenda" href="https://wa.me/5521967436081?text=Ol%C3%A1%2C%20vim%20do%20Site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Unidade%20Paci%C3%AAncia" target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Agendar
+          </a>
+          <a class="btn-maps" href="https://maps.app.goo.gl/AiFrD8R6KTn8uEHC9" target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Como Chegar
+          </a>
+        </div>
+      </div>
+      <div class="unit-card__hours">
+        <div class="hours-title"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Horários</div>
+        <div class="hours-list">
+          <div class="hours-row"><span class="hours-row__day">Segunda</span><span class="hours-row__time">09:00 - 20:00</span></div>
+          <div class="hours-row"><span class="hours-row__day">Terça</span><span class="hours-row__time">09:00 - 20:00</span></div>
+          <div class="hours-row"><span class="hours-row__day">Quarta</span><span class="hours-row__time">09:00 - 20:00</span></div>
+          <div class="hours-row"><span class="hours-row__day">Quinta</span><span class="hours-row__time">09:00 - 20:00</span></div>
+          <div class="hours-row"><span class="hours-row__day">Sexta</span><span class="hours-row__time">09:00 - 20:00</span></div>
+          <div class="hours-row"><span class="hours-row__day">Sábado</span><span class="hours-row__time">09:00 - 20:00</span></div>
+          <div class="hours-row"><span class="hours-row__day">Domingo</span><span class="hours-row__time closed">Fechado</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="unit-card">
+      <div class="unit-card__info">
+        <div class="unit-status" id="status-inhoaiba"><span class="unit-status__dot"></span>Aberto</div>
+        <div class="unit-card__name">Unidade Inhoaíba</div>
+        <div class="unit-detail">
+          <div class="unit-detail__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="unit-detail__label">Endereço</div><div class="unit-detail__value">Estrada de Inhoaíba 47a</div><div class="unit-detail__sub">23063010</div></div>
+        </div>
+        <div class="unit-detail">
+          <div class="unit-detail__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 5.53 5.53l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg></div>
+          <div><div class="unit-detail__label">Telefone</div><div class="unit-detail__value">(21) 96743-6081</div></div>
+        </div>
+        <div class="unit-card__actions">
+          <a class="btn-unit-agenda" href="https://wa.me/5521987046422?text=Ol%C3%A1%2C%20vim%20do%20Site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Unidade%20Inhoaíba" target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Agendar
+          </a>
+          <a class="btn-maps" href="https://maps.app.goo.gl/DFJ5zLJTH4JFJSZ38" target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Como Chegar
+          </a>
+        </div>
+      </div>
+      <div class="unit-card__hours">
+        <div class="hours-title"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Horários</div>
+        <div class="hours-list">
+          <div class="hours-row"><span class="hours-row__day">Segunda</span><span class="hours-row__time">09:00 - 20:00</span></div>
+          <div class="hours-row"><span class="hours-row__day">Terça</span><span class="hours-row__time">09:00 - 20:00</span></div>
+          <div class="hours-row"><span class="hours-row__day">Quarta</span><span class="hours-row__time">09:00 - 20:00</span></div>
+          <div class="hours-row"><span class="hours-row__day">Quinta</span><span class="hours-row__time">09:00 - 20:00</span></div>
+          <div class="hours-row"><span class="hours-row__day">Sexta</span><span class="hours-row__time">09:00 - 20:00</span></div>
+          <div class="hours-row"><span class="hours-row__day">Sábado</span><span class="hours-row__time">09:00 - 20:00</span></div>
+          <div class="hours-row"><span class="hours-row__day">Domingo</span><span class="hours-row__time closed">Fechado</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services-section">
+  <div class="section-label">Tabela de Preços</div>
+  <h2 class="section-title">Nossos Serviços</h2>
+  <div class="services-grid">
+    <div class="service-card"><div class="service-card__icon">✂️</div><div class="service-card__name">Corte de Cabelo</div><div class="service-card__price">R$ 40,00</div></div>
+    <div class="service-card"><div class="service-card__icon">🪒</div><div class="service-card__name">Barba</div><div class="service-card__price">R$ 25,00</div></div>
+    <div class="service-card" style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border-color:#93c5fd"><div class="service-card__icon">💈</div><div class="service-card__name" style="color:#1e3a8a">Combo Completo</div><div class="service-card__price" style="color:#1d4ed8">R$ 65,00</div></div>
+    <div class="service-card"><div class="service-card__icon">🎨</div><div class="service-card__name">Camuflagem de Fios</div><div class="service-card__price">Consulte</div></div>
+    <div class="service-card"><div class="service-card__icon">✨</div><div class="service-card__name">Acabamento / Pezinho</div><div class="service-card__price">Consulte</div></div>
+    <div class="service-card"><div class="service-card__icon">💆</div><div class="service-card__name">Tratamento Capilar</div><div class="service-card__price">R$ 25,00</div></div>
+  </div>
+  <div style="text-align:center">
+    <button class="btn-wa" onclick="openWaPopup()" type="button" style="display:inline-flex">
+      <svg width="20" height="20" aria-hidden="true"><use href="#icon-wa"/></svg>
+      Agendar pelo WhatsApp
+    </button>
+  </div>
+</section>
+
+<section id="faq" class="faq-section">
+  <div class="section-label">Dúvidas</div>
+  <h2 class="section-title">Perguntas Frequentes</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>Preciso agendar ou posso ir sem marcar?</summary><p>Recomendamos agendar pelo WhatsApp para garantir seu horário e evitar filas. Mas aceitamos clientes sem agendamento, sujeito à disponibilidade.</p></details>
+    <details class="faq-item"><summary>Vocês atendem crianças?</summary><p>Sim! Temos profissionais experientes para cortes infantis.</p></details>
+    <details class="faq-item"><summary>Quais formas de pagamento são aceitas?</summary><p>Aceitamos Pix, dinheiro e cartões de débito e crédito.</p></details>
+    <details class="faq-item"><summary>O que é a Assinatura da Gomez?</summary><p>Nosso plano de assinatura oferece cortes mensais com desconto exclusivo. Entre em contato para saber mais sobre os planos disponíveis.</p></details>
+  </div>
+</section>
+
+<section id="reviews" class="reviews-section">
+  <div class="section-label">O que dizem nossos clientes</div>
+  <h2 class="section-title">Depoimentos</h2>
+  <div class="reviews-grid">
+    <div class="review-card"><div class="review-card__stars">★★★★★</div><p class="review-card__text">"Melhor barbearia da região! Atendimento impecável, saí com o visual que queria. Recomendo demais!"</p><div class="review-card__author">Thiago Silva</div></div>
+    <div class="review-card"><div class="review-card__stars">★★★★★</div><p class="review-card__text">"Profissionais excelentes, ambiente confortável e com estilo. Já virei cliente fiel da Gomez!"</p><div class="review-card__author">Rafael Costa</div></div>
+    <div class="review-card"><div class="review-card__stars">★★★★★</div><p class="review-card__text">"Sempre saio daqui com o cabelo perfeito. O Combo Titular vale cada centavo. Muito obrigado!"</p><div class="review-card__author">Lucas Andrade</div></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2025 Barbearia Gomez — Paciência &amp; Inhoaíba, Rio de Janeiro</p>
+</footer>
+
+<button id="float-wa-btn" class="float-wa" onclick="openWaPopup()" type="button" aria-label="Agendar pelo WhatsApp">
+  <svg width="26" height="26" aria-hidden="true"><use href="#icon-wa"/></svg>
+  <span>Agendar agora</span>
+</button>
+
+<div id="wa-popup" role="dialog" aria-modal="true" aria-labelledby="wa-popup-title">
+  <div class="wa-popup__overlay" id="wa-popup-overlay"></div>
+  <div class="wa-popup__box">
+    <button class="wa-popup__close" id="wa-popup-close" aria-label="Fechar">✕</button>
+    <p class="wa-popup__eyebrow">Agendar pelo WhatsApp</p>
+    <h2 class="wa-popup__title" id="wa-popup-title">Escolha sua unidade</h2>
+    <div class="wa-popup__units">
+      <a class="wa-popup__unit" href="https://wa.me/5521967436081?text=Ol%C3%A1%2C%20vim%20do%20Site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Unidade%20Paci%C3%AAncia" target="_blank" rel="noopener">
+        <svg width="28" height="28" aria-hidden="true"><use href="#icon-wa"/></svg>
+        <div><div class="wa-popup__unit-name">Unidade Paciência</div><div class="wa-popup__unit-sub">Rua Campestre, lote 23 quadra 32</div></div>
+      </a>
+      <a class="wa-popup__unit" href="https://wa.me/5521987046422?text=Ol%C3%A1%2C%20vim%20do%20Site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Unidade%20Inhoaíba" target="_blank" rel="noopener">
+        <svg width="28" height="28" aria-hidden="true"><use href="#icon-wa"/></svg>
+        <div><div class="wa-popup__unit-name">Unidade Inhoaíba</div><div class="wa-popup__unit-sub">Estrada de Inhoaíba, 47a</div></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<script>
+(function(){
+  var track=document.getElementById('galleryTrack');
+  var dotsContainer=document.getElementById('galleryDots');
+  var carousel=document.getElementById('galleryCarousel');
+  if(!track)return;
+  var slides=track.querySelectorAll('.gallery-slide');
+  var total=slides.length;
+  if(!total)return;
+  var current=0,autoTimer;
+  for(var i=0;i<total;i++){
+    (function(idx){
+      var dot=document.createElement('button');
+      dot.className='gallery-dot'+(idx===0?' active':'');
+      dot.setAttribute('role','tab');
+      dot.setAttribute('aria-label','Foto '+(idx+1));
+      dot.addEventListener('click',function(){goTo(idx);});
+      dotsContainer.appendChild(dot);
+    })(i);
+  }
+  function perView(){return window.innerWidth>=900?3:(window.innerWidth>=640?2:1);}
+  function maxScroll(){return Math.max(0,total-perView());}
+  function updateDots(){
+    var mx=maxScroll();
+    var dots=dotsContainer.querySelectorAll('.gallery-dot');
+    for(var j=0;j<dots.length;j++){dots[j].style.display=j>mx?'none':'block';dots[j].classList.toggle('active',j===current);}
+  }
+  function goTo(index){
+    var mx=maxScroll();
+    current=index>mx?0:(index<0?mx:index);
+    var slideW=slides[0].getBoundingClientRect().width;
+    var gap=parseFloat(window.getComputedStyle(track).gap)||0;
+    track.style.transform='translateX(-'+(current*(slideW+gap))+'px)';
+    updateDots();
+  }
+  window.addEventListener('resize',function(){goTo(current);});
+  document.getElementById('galleryPrev').addEventListener('click',function(){resetAuto();goTo(current-1);});
+  document.getElementById('galleryNext').addEventListener('click',function(){resetAuto();goTo(current+1);});
+  var startX=0;
+  track.addEventListener('touchstart',function(e){startX=e.touches[0].clientX;},{passive:true});
+  track.addEventListener('touchend',function(e){var diff=startX-e.changedTouches[0].clientX;if(Math.abs(diff)>40){resetAuto();goTo(current+(diff>0?1:-1));}},{passive:true});
+  function startAuto(){autoTimer=setInterval(function(){goTo(current+1);},4000);}
+  function stopAuto(){clearInterval(autoTimer);}
+  function resetAuto(){stopAuto();startAuto();}
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){e.isIntersecting?startAuto():stopAuto();});},{threshold:.25});
+  obs.observe(carousel);
+  carousel.addEventListener('mouseenter',stopAuto);
+  carousel.addEventListener('mouseleave',startAuto);
+})();
+
+(function(){
+  var popup=document.getElementById('wa-popup');
+  function open(){popup.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){popup.classList.remove('open');document.body.style.overflow='';}
+  window.openWaPopup=open;
+  document.getElementById('wa-popup-close').addEventListener('click',close);
+  document.getElementById('wa-popup-overlay').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+
+(function(){
+  var now=new Date(),day=now.getDay(),hour=now.getHours();
+  var isOpen=day!==0&&hour>=9&&hour<20;
+  var ids=['status-paciencia','status-inhoaiba'];
+  for(var i=0;i<ids.length;i++){
+    var el=document.getElementById(ids[i]);
+    if(!el)continue;
+    var dot=el.querySelector('.unit-status__dot');
+    if(isOpen){el.style.color='#16a34a';dot.style.background='#16a34a';el.lastChild.textContent=' Aberto';}
+    else{el.style.color='#94a3b8';dot.style.background='#94a3b8';dot.style.animation='none';el.lastChild.textContent=' Fechado';}
+  }
+})();
+</script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W8K29MWQ');</script>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8K29MWQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+</body>
+</html>
